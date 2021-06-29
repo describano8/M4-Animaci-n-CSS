@@ -1,0 +1,49 @@
+body {
+    background-color: #ffffff;
+    height:100%;
+    overflow: hidden;
+  }
+  
+.pelota {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #FFE600;
+  }
+  
+.animacion1 {
+    /* name , duration, timing function, delay, iteration count, direction  */
+    animation: animacion1 2s linear 0s infinite alternate;
+  }
+  
+.animacion2 {
+    /* name , duration, timing function, delay, iteration count, direction  */
+    animation: animacion2 0.5s ease-in 0s infinite alternate;
+  }
+
+@keyframes animacion1 {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(calc(100vw - 5vmin));
+    }
+  }
+  
+@keyframes animacion2 {
+    0% {
+      transform: translateY(0px);
+    }
+    90%{
+      height: 70px;
+    }
+    95% {
+      height: 60px;
+      transform: translateY(calc(100vh - 5vmin));
+    }
+    100% {
+      height: 40px;
+      transform: translateY(calc(100vh - 5vmin));
+    }
+  }
